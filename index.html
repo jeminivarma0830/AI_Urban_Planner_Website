@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><body>
+<h1>AI Urban Planner</h1>
+<form method='post'>
+Grid Size <input name='size' value='10'><br>
+Residential <input name='residential' value='20'><br>
+Commercial <input name='commercial' value='10'><br>
+Parks <input name='parks' value='5'><br>
+Schools <input name='schools' value='5'><br>
+Hospitals <input name='hospitals' value='5'><br>
+<button>Generate</button>
+</form>
+{% if grid %}
+<table border='1'>
+{% for row in grid %}<tr>{% for c in row %}<td>{{c}}</td>{% endfor %}</tr>{% endfor %}
+</table>
+{% endif %}
+</body></html>
